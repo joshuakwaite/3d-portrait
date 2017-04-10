@@ -1,0 +1,32 @@
+<h1>{{test}}</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                     One:
+                    <input type="text" class="form-control" ng-model="info">
+                    <!--Two:-->
+                    <!--<input type="text" class="form-control" ng-model="info.two">-->
+                    <!--Three:-->
+                    <!--<input type="text" class="form-control" ng-model="info.three">-->
+                    <br>
+                    <button class="btn btn-primary" ng-click="submitForm(info)">Submit</button>
+                    <input type="text" class="form-control" ng-model="username" placeholder="username">
+                    <input type="text" class="form-control" ng-model="password" placeholder="password">
+                    <button class="btn btn-primary" ng-click="signIn(username, password)">SignIn</button>
+                    <button class="btn btn-primary" ng-click="signOut()">SignOut</button>
+                    <br>
+                    <input type="text" class="form-control" ng-model="object.name" placeholder="Object Name">
+                    <input type="text" class="form-control" ng-model="object.description" placeholder="Object Description">
+                    <button class="btn btn-primary" ng-click="newObject(object)">Create Object</button>
+
+
+                    <button class="btn btn-primary" ng-click="getInfo()">Get Info</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
