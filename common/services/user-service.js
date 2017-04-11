@@ -16,6 +16,14 @@ app.service('userService', ["$http", "Backand", function($http, Backand) {
             return Backand.object.getList(name, params);
     };
 
+    vm.signUp = function (firstName, lastName, email, password, confirmPassword) {
+        return backand.signup(firstName, lastName, email, password, confirmPassword)
+                .then(function(res) {
+                    console.log(res.data)
+                })
+
+    }
+
     vm.signOut = function () {
         return Backand.signout()
     };

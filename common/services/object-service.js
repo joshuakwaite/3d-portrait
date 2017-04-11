@@ -6,14 +6,14 @@ app.service('objectService', ["$http", "Backand", "userService", function($http,
 
     vm.createObject = function(object) {
 
-    return Backand.object.create("items", {
-        "name": object.name,
-        "description": object.description,
-        "user": userService.getUserInfo().then(function(res) {
-            return res.data.userId
+        userService.getUserInfo().then(function(res){
+             Backand.object.create("items", {
+                "name": object.name,
+                "description": object.description,
+                "user": res.data.userId
+            }).then(function(response){
+                console.log(response)
+             });
         })
-    });
-
     };
-
 }]);

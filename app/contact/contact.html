@@ -25,6 +25,17 @@
 
                     <button class="btn btn-primary" ng-click="getInfo()">Get Info</button>
 
+                    <br>
+                    <br>
+
+
+                    <input type="text" class="form-control" ng-model="firstName" placeholder="First Name">
+                    <input type="text" class="form-control" ng-model="lastName" placeholder="Last Name">
+                    <input type="email" class="form-control" ng-model="emailOne" placeholder="Email">
+                    <input type="text" class="form-control" ng-model="passwordTwo" placeholder="Password">
+                    <input type="text" class="form-control" ng-model="repeatPassword" placeholder="Repeat Password">
+                    <button class="btn btn-primary" ng-click="signIn(firstName, lastName, emailOne, passwordTwo, confirmPassword)">Sign Up</button>
+
                 </div>
             </div>
         </div>

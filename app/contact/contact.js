@@ -25,15 +25,19 @@ app.controller("contactController", ["$scope", "userService", "objectService", f
     };
 
     $scope.newObject = function(object) {
-        objectService.createObject(object).then(function(res) {
-            console.log(res.data)
-        })
+        objectService.createObject(object)
     };
 
     $scope.getInfo = function() {
         userService.getUserInfo().then(function(res){
             console.log(res.data)
         })
-    }
+    };
+
+    $scope.signUp = function (firstName, lastName, email, password, confirmPassword) {
+        userService.signUp(firstName, lastName, email, password, confirmPassword).then(function(res){
+            console.log(res.data)
+        })
+    };
 
 }]);
