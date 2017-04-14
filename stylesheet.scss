@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,800');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #FFFFFF;
+}
+
+
+/*GENERAL*/
+
+.main-buttons {
+  position: relative;
+  top: 250px;
+  margin: 0px 25px 50px 25px;
+  background-color: transparent;
+  border-color: white;
+  /*-webkit-transition: all .10s ease-in-out;*/
+  /*-moz-transition: all .10s ease-in-out;*/
+  /*-ms-transition: all .10s ease-in-out;*/
+  /*-o-transition: all .10s ease-in-out;*/
+  /*transition: all .10 ease-in-out;*/
+}
+
+/*.two {*/
+/*background-color: transparent;*/
+/*border-color: white;*/
+
+/*}*/
+
+/*NAVBAR*/
+
+.navbar {
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.navbar-transparent {
+  background-color: transparent;
+  border: 0px;
+}
+
+.navbar-transparent .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-transparent .navbar-nav>li>a:hover {
+  color: #31B0D5;
+}
+.navbar-transparent .navbar-nav>li>a:focus {
+  color: white;
+}
+
+.navbar-transparent .navbar-brand {
+  color: white;
+}
+
+.navbar-transparent .navbar-brand:hover {
+  color: white;
+}
+.navbar-transparent .navbar-brand:focus {
+  color: white;
+}
+
+
+/*HOME*/
+
+.home-image {
+  height: 100vh;
+  background-image: url('app/images/melanie-villeneuve-39759.jpg');
+  background-position: top;
+  background-size: cover;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
+
+  background-color: grey;
+  overflow: auto;
+  z-index: -9999;
+  background-color: rgba(0,0,0,.5);
+  background-blend-mode: multiply;
+}
+
+.home-image p {
+  position: relative;
+  color: white;
+  font-size: 5em;
+  top: 150px;
+}
+
+.doingsDescription {
+  width: 100%;
+  height: 200px;
+
+  .descriptionTitle {
+    color: #31B0D5;
+    font-size: 1.5em;
+    position: relative;
+    top: 120px;
+  }
+  p {
+    color: white;
+    position: relative;
+    top: 55px;
+  }
+  .descriptionIcon {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+.doingsDescriptionBackground {
+  background-color: #38383A;
+}
+
+.footer {
+  height: 300px;
+  color: white;
+  background-color: #38383A;
+}
+
+/*PRODUCT*/
+
+.product-image {
+  height: 100vh;
+  background-image: url('app/images/full_color_Sandstone_tutorial_featured.jpeg');
+  background-position: top;
+  background-size: cover;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
+
+  background-color: grey;
+  overflow: auto;
+  z-index: -9999;
+  background-color: rgba(0,0,0,.2);
+  background-blend-mode: multiply;
+}
+
+.product-image .container {
+  width: 400px;
+  position: relative;
+  top: 200px;
+  right: 250px;
+}
+
+.product-image p {
+  color: white;
+  font-size: 3em;
+}

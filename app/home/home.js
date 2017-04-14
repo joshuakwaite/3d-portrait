@@ -4,4 +4,10 @@ app.controller("homeController", ["$scope", function ($scope) {
 
     $scope.test = "home"
 
+        $('#scrollOneButton').click(function () {
+            $('html, body').animate({
+                scrollTop: $('#scrollOne').offset().top-50
+            }, 'slow');
+        });
+
 }]);
