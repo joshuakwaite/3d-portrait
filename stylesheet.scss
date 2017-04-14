@@ -8,6 +8,53 @@ body {
 
 /*GENERAL*/
 
+.sketchfab-embed-wrapper {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  margin: 0 10px 0 10px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+#googleMap {
+  position: relative;
+  top: 25px;
+  right: 25px;
+}
+
+.getStarted {
+  background-color: #31B0D5;
+  color: #38383A;
+
+  h1 {
+    color: #38383A;
+  }
+
+
+button {
+  position: relative;
+  left: 209px;
+  bottom: 25px;
+}
+  #two{
+    position: relative;
+    top: 10px;
+  }
+}
+
+.socialMediaIcons {
+  height: 50px;
+  margin: 25px 15px 45px 15px;
+}
+
+.button-general {
+  background-color: transparent;
+  border-color: white;
+}
+
 .main-buttons {
   position: relative;
   top: 250px;
@@ -35,6 +82,7 @@ body {
   -ms-transition: all .25s ease-in-out;
   -o-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
+
 }
 
 .navbar-transparent {
@@ -116,7 +164,7 @@ body {
 
 .footer {
   height: 300px;
-  color: white;
+  color: lightgrey;
   background-color: #38383A;
 }
 

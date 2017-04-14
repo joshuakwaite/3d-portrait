@@ -4,6 +4,41 @@ body {
   background-color: #FFFFFF; }
 
 /*GENERAL*/
+.sketchfab-embed-wrapper {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  margin: 0 10px 0 10px; }
+
+.clickable {
+  cursor: pointer; }
+
+#googleMap {
+  position: relative;
+  top: 25px;
+  right: 25px; }
+
+.getStarted {
+  background-color: #31B0D5;
+  color: #38383A; }
+  .getStarted h1 {
+    color: #38383A; }
+  .getStarted button {
+    position: relative;
+    left: 209px;
+    bottom: 25px; }
+  .getStarted #two {
+    position: relative;
+    top: 10px; }
+
+.socialMediaIcons {
+  height: 50px;
+  margin: 25px 15px 45px 15px; }
+
+.button-general {
+  background-color: transparent;
+  border-color: white; }
+
 .main-buttons {
   position: relative;
   top: 250px;
@@ -91,7 +126,7 @@ body {
 
 .footer {
   height: 300px;
-  color: white;
+  color: lightgrey;
   background-color: #38383A; }
 
 /*PRODUCT*/
