@@ -1,0 +1,23 @@
+{
+  "name": "3dportrait",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "instafeed.js": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalew8/3d-portrait.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalew8/3d-portrait/issues"
+  },
+  "homepage": "https://github.com/kalew8/3d-portrait#readme"
+}

@@ -1,63 +1,15 @@
-<h1>{{test}}</h1>
-
-<div class="container-fluid">
+<div class="container-fluid" style="padding: 0px;">
     <div class="row">
         <div class="col-xs-12">
-            <div class="row">
-                <div class="col-xs-6 col-xs-offset-3">
-                     One:
-                    <input type="text" class="form-control" ng-model="info">
-                    <!--Two:-->
-                    <!--<input type="text" class="form-control" ng-model="info.two">-->
-                    <!--Three:-->
-                    <!--<input type="text" class="form-control" ng-model="info.three">-->
-                    <br>
-                    <button class="btn btn-primary" ng-click="submitForm(info)">Submit</button>
-                    <input type="text" class="form-control" ng-model="username" placeholder="username">
-                    <input type="text" class="form-control" ng-model="password" placeholder="password">
-                    <button class="btn btn-primary" ng-click="signIn(username, password)">SignIn</button>
-                    <button class="btn btn-primary" ng-click="signOut()">SignOut</button>
-                    <br>
-                    <input type="text" class="form-control" ng-model="object.name" placeholder="Object Name">
-                    <input type="text" class="form-control" ng-model="object.description" placeholder="Object Description">
-                    <button class="btn btn-primary" ng-click="newObject(object)">Create Object</button>
-
-
-                    <button class="btn btn-primary" ng-click="getInfo()">Get Info</button>
-
-                    <br>
-                    <br>
-
-
-                    <input type="text" class="form-control" ng-model="firstName" placeholder="First Name">
-                    <input type="text" class="form-control" ng-model="lastName" placeholder="Last Name">
-                    <input type="email" class="form-control" ng-model="emailOne" placeholder="Email">
-                    <input type="text" class="form-control" ng-model="passwordTwo" placeholder="Password">
-                    <input type="text" class="form-control" ng-model="repeatPassword" placeholder="Repeat Password">
-                    <button class="btn btn-primary" ng-click="signIn(firstName, lastName, emailOne, passwordTwo, confirmPassword)">Sign Up</button>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto autem consectetur cupiditate ea, eius facere facilis illum laboriosam minus nihil non perferendis similique vel. Deserunt eos nihil temporibus?</p>
+            <div class="contact-image text-center center-block">
+                <div class="container">
                 </div>
+                <!--<button class="btn btn-info main-buttons three">Check It Out</button>-->
+                <!--<button class="btn btn-info main-buttons three">Pricing</button>-->
+
             </div>
+
+
         </div>
     </div>
 </div>

@@ -8,6 +8,16 @@ body {
 
 /*GENERAL*/
 
+.offPageSecond {
+  height: 400px;
+  background-color: #DDDEDE;
+}
+
+.offPageThird {
+  height: 300px;
+  background-color: #F3FBFF;
+}
+
 .sketchfab-embed-wrapper {
   position: relative;
   top: 15px;
@@ -25,12 +35,14 @@ body {
   right: 25px;
 }
 
-.getStarted {
-  background-color: #31B0D5;
-  color: #38383A;
+.ModelWrapper {
+  background-color: #157f90;
+  color: lightgrey;
+  height: 250px;
+  padding: 15px 15px 15px 15px ;
 
   h1 {
-    color: #38383A;
+    color: lightgrey;
   }
 
 
@@ -39,15 +51,17 @@ button {
   left: 209px;
   bottom: 25px;
 }
-  #two{
-    position: relative;
-    top: 10px;
-  }
+
+}
+
+.two{
+  position: relative;
+  top: 10px;
 }
 
 .socialMediaIcons {
   height: 50px;
-  margin: 25px 15px 45px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .button-general {
@@ -98,7 +112,7 @@ button {
   color: #31B0D5;
 }
 .navbar-transparent .navbar-nav>li>a:focus {
-  color: white;
+  color: #83D4EB
 }
 
 .navbar-transparent .navbar-brand {
@@ -117,7 +131,7 @@ button {
 
 .home-image {
   height: 100vh;
-  background-image: url('app/images/melanie-villeneuve-39759.jpg');
+  background-image: url('app/images/melanie-villeneuve-39759(2).jpg');
   background-position: top;
   background-size: cover;
   color: #000;
@@ -148,7 +162,7 @@ button {
     top: 120px;
   }
   p {
-    color: white;
+    color: lightgrey;
     position: relative;
     top: 55px;
   }
@@ -163,7 +177,7 @@ button {
 }
 
 .footer {
-  height: 300px;
+  height: 250px;
   color: lightgrey;
   background-color: #38383A;
 }
@@ -171,9 +185,9 @@ button {
 /*PRODUCT*/
 
 .product-image {
-  height: 100vh;
+  height: 50vh;
   background-image: url('app/images/full_color_Sandstone_tutorial_featured.jpeg');
-  background-position: top;
+  background-position: center;
   background-size: cover;
   color: #000;
   text-shadow: 1px 1px 0 #fff;
@@ -188,11 +202,59 @@ button {
 .product-image .container {
   width: 400px;
   position: relative;
-  top: 200px;
+  top: 100px;
   right: 250px;
 }
 
 .product-image p {
   color: white;
   font-size: 3em;
+}
+
+//GIVE
+
+.give-image {
+  height: 50vh;
+  background-image: url('app/images/give.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
+
+  background-color: grey;
+  overflow: auto;
+  z-index: -9999;
+  background-color: rgba(0,0,0,.5);
+  background-blend-mode: multiply;
+
+  p {
+    color: white;
+    font-size: 3em;
+    position: relative;
+    top: 150px;
+  }
+}
+
+ //CONTACT
+
+.contact-image {
+  height: 50vh;
+  background-image: url('app/images/3dps.png');
+  background-position: center;
+  background-size: cover;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
+
+  background-color: grey;
+  overflow: auto;
+  z-index: -9999;
+  background-color: rgba(0,0,0,.5);
+  background-blend-mode: multiply;
+
+  p {
+    color: white;
+    font-size: 3em;
+    position: relative;
+    top: 150px;
+  }
 }
