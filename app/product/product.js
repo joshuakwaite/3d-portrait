@@ -1,12 +1,15 @@
 var app = angular.module("3dportraitApp");
 
-app.controller("productController", ["$scope", function($scope) {
+app.controller("productController", ["$scope", "$location", function ($scope, $location) {
 
     var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'awesome',
-        clientId: '933754b3d5c44b46925ed5294cfa17a1'
+        get: 'user',
+        userId: 4794233868,
+        accessToken:  '4794233868.911d299.3d42fceb8414437a8e3d6f098b6d163a',
+        resolution: 'standard_resolution',
+        limit: 8
     });
+
     feed.run();
 
 }]);

@@ -8,14 +8,21 @@ body {
 
 /*GENERAL*/
 
+.input-container {
+  input {
+    display: inline-block;
+    width: 300px;
+    margin: 5px 5px 5px 5px;
+  }
+}
+
 .offPageSecond {
-  height: 400px;
-  background-color: #DDDEDE;
+  background-color: #F3FBFF;
 }
 
 .offPageThird {
   height: 300px;
-  background-color: #F3FBFF;
+  background-color: #DDDEDE;
 }
 
 .sketchfab-embed-wrapper {
@@ -211,6 +218,32 @@ button {
   font-size: 3em;
 }
 
+#instafeed {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    flex-basis: calc(100%/4);
+    flex-grow: 1;
+    line-height: 0;
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -ms-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    border: 10px solid transparent;
+    margin: 20px 0px 20px 0px;
+  }
+  img {
+    width: 100%
+  }
+}
+
 //GIVE
 
 .give-image {
@@ -253,8 +286,67 @@ button {
 
   p {
     color: white;
-    font-size: 3em;
+    font-size: 2em;
     position: relative;
-    top: 150px;
+    top: 50px;
   }
 }
+
+.contactUsMap {
+  background-color: #38383A;
+  color: lightgrey;
+}
+
+//SCHEDULE
+
+.schedule-image {
+  height: 100vh;
+  background-image: url('app/images/3dps.png');
+  background-position: center;
+  background-size: cover;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
+
+  background-color: grey;
+  overflow: auto;
+  z-index: -9999;
+  background-color: rgba(0,0,0,.9);
+  background-blend-mode: multiply;
+
+  h2 {
+    position: relative;
+    top: 50px;
+    color: white;
+  }
+  p {
+    color: white;
+    position: relative;
+    top: 50px;
+  }
+  form {
+    position: relative;
+    top: 200px;
+  }
+}
+
+.buttons {
+  background-color: transparent;
+  border-color: white;
+}
+
+
+//.input-container {
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: space-between;
+//  align-items: center;
+//
+//  input {
+//    -moz-box-flex: 1;
+//    -webkit-box-flex: 1;
+//    flex-basis: calc(100%/2);
+//    flex-grow: 1;
+//    border: 10px solid transparent;
+//    margin: 10px 0px 10px 0px;
+//  }
+//}
