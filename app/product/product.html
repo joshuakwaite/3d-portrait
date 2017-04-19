@@ -1,10 +1,16 @@
 <div class="container-fluid" style="padding: 0px;">
-    <div class="row">
+    <div class="row product-image" style="margin: 0px;">
         <div class="col-xs-12">
-            <div class="product-image text-center center-block">
-                <div class="container">
-                    <p>Preserving your memories.. blah blah blah</p>
+            <div class="text-center center-block">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="container">
+                            <p>You want it? We print it.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6"></div>
                 </div>
+
                 <!--<button class="btn btn-info main-buttons two">Check It Out</button>-->
                 <!--<button class="btn btn-info main-buttons two">Pricing</button>-->
 
@@ -13,19 +19,82 @@
 
         </div>
     </div>
-    <div class="row offPageSecond">
-        <div class="col-xs-6">
-            <div id="instafeed"></div>
+    <div class="row macbook-row" style="margin: 0px;">
+        <div class="col-xs-6 text-center">
+            <p style="font-size: 3em;">We print everything</p>
+            <p style="color: gray;">The 3DPS offers 3D printing services in all available materials. If you have a specific material in mind for a 3D print, just send us the size of your model and the material you want it in, and we will get back to you.
+            </p>
+            <p style="font-size: 3em;">Minis</p>
+            <p style="color: gray"> Our mini collection offers you and your loved ones and opportunity to preserve your memories in a way never before available. We print in any size under 19 inches, and can print to scale. If you have any questions, please contact us at info@the3dps.com or by phone, at 385-645-3377.</p>
         </div>
         <div class="col-xs-6">
-            <h1>MORE INFO ABOUT PRODUCT GOES HERE</h1>
+            <img src="app/images/3d-model.png" alt="Your browser does not support the image type">
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 offPageThird text-center">
-            <h1>PRICING INFO GOES HERE</h1>
+    <div class="row offPageSecond" style="margin: 0px;">
+        <div class="col-xs-12">
+            <!--<div id="instafeed"></div>-->
         </div>
     </div>
 
+    <div class="row offPageThird" style="margin: 0px;">
+        <div class="col-xs-6">
+            <h3 class="text-center">Standard Pricing</h3>
+            <h5 class="text-center">Most Popular</h5>
+                <div class="table-responsive" style="margin-left: 15px;">
+                    <table class="table text-center">
+                        <thead>
+                        <tr>
+                            <td class="text-center">Mini Size</td>
+                            <td class="text-center">Price</td>
+                            <td class="text-center">Additional Person</td>
+                            <td class="text-center">Additional Under 36"</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="prices in priceList">
+                            <td>{{prices.Size}} inches</td>
+                            <td>{{prices.Price | currency}}</td>
+                            <td>{{prices.Additional | currency}}</td>
+                            <td>{{prices.Under | currency}}</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center">For more pricing, you can download our price sheet by clicking below.</p>
+            <a href="https://www.dropbox.com/s/u64mnf4cgxt20e3/the3dps-price-sheet.pdf?dl=1" style="text-decoration: none;"><button class="btn btn-danger"style="display: block; margin: auto; margin-bottom: 50px;">Pricing</button></a>
+        </div>
+        <div class="col-xs-6">
+            <h3 class="text-center">Pricing to Scale</h3>
+            <h5 class="text-center">Input the information below to find the size and price of your desired mini</h5>
+            <div class="checkPrices">
+                <form>
+                    <input type="number" class="form-control" ng-model="inches" placeholder="Height in Inches">
+                    <br>
+                    <!--<input type="text" class="form-control" ng-model="scale" placeholder="Scale">-->
+                    <p class="text-center">Scale:</p>
+                    <select ng-model="scale" class="form-control" style="width: 200px">
+                        <option ng-value=16>1/16 Scale</option>
+                        <option ng-value=14>1/14 Scale</option>
+                        <option ng-value=12>1/12 Scale</option>
+                        <option ng-value=10>1/10 Scale</option>
+                        <option ng-value=9>1/9 Scale</option>
+                        <option ng-value=8>1/8 Scale</option>
+                        <option ng-value=7>1/7 Scale</option>
+                        <option ng-value=6>1/6 Scale</option>
+                        <option ng-value=5>1/5 Scale</option>
+                        <option ng-value=4>1/4 Scale</option>
+                        <option ng-value=3>1/3 Scale</option>
+                    </select>
+                    <br>
+                    <button class="btn btn-info" ng-click="calculatePrice(inches, scale)">Calculate</button>
+                </form>
+                <br>
+                <p class="text-center">Mini height in inches: {{size | number: 2}}</p>
+                <p class="text-center">Mini price: {{price | currency}}</p>
+            </div>
+        </div>
+    </div>
 </div>
 

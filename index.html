@@ -37,7 +37,7 @@
                         <!--<li><a href="#!/login">Login</a></li>-->
                         <!--<li><a href="#!/logout">Logout</a></li>-->
                         <!--<li><a href="#!/signup">Sign Up</a></li>-->
-                        <li class="clickable"><a data-toggle="modal" data-target="#getStarted">Set Appointment</a></li>
+                        <!--<li class="clickable"><a data-toggle="modal" data-target="#getStarted">Set Appointment</a></li>-->
                     <!--</ul>-->
                 </div>
             </div>
@@ -97,9 +97,9 @@
             <a href="https://www.pinterest.com/the3dportrait/" target="_blank"><img src="app/images/pinterest.png"
                                                                              class="socialMediaIcons clickable"></a>
             <br>
-            <input type="email" class="form-control newletterSignup" placeholder="Email"
-                   style="width: 300px; display: inline-block;">
-            <button class="btn btn-info button-general" style="display: inline-block;">Subscribe</button>
+            <!--<input type="email" class="form-control newletterSignup" placeholder="Email"-->
+                   <!--style="width: 300px; display: inline-block;">-->
+            <!--<button class="btn btn-info button-general" style="display: inline-block;">Subscribe</button>-->
         </div>
     </div>
     <div class="col-xs-3">
@@ -107,7 +107,7 @@
         <p style="margin-top: 10px;">We work to make the process as simple as possible.</p>
         <p>Come in, get scanned, and get your portrait in the mail within a week.</p>
         <p style="margin-top: 10px;">Don't believe me? Try it out.</p>
-        <button class="btn btn-info button-general two" id="getStartedBtn" data-toggle="modal" data-target="#getStarted">Get Started</button>
+        <!--<button class="btn btn-info button-general two" id="getStartedBtn" data-toggle="modal" data-target="#getStarted">Get Started</button>-->
 
 
     </div>
@@ -117,11 +117,11 @@
         <p>Orem, UT</p>
         <p>Email: info@the3dps.com</p>
         <p>Phone: 385-645-3377</p>
-        <a href="https://www.google.com/maps/place/40%C2%B016'34.1%22N+111%C2%B041'11.2%22W/@40.276102,-111.684925,16z/data=!4m5!3m4!1s0x0:0x0!8m2!3d40.276151!4d-111.686448?hl=en-US" target="_blank">
+        <a data-toggle="modal" data-target="#mapsModal">
         <button class="btn btn-info button-general" id="viewMap">View Map</button></a>
     </div>
 </div>
-<div class="row">
+<div class="row" style="margin-left: 0px; margin-right: 0px;">
     <div class="col-xs-12 text-center" style="color: grey; background-color: #212121; height: 50px;">
         <p style="margin-top: 15px;">3D Portrait Studios</p>
     </div>
@@ -195,3 +195,38 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="mapsModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!--MODAL HEADER-->
+            <div class="modal-header">
+            <button type="button" class="close"
+            data-dismiss="modal"
+            ng-click="toggleEdit = false">&times;</button>
+            <h2 class="modal-title" style="color: black;">3D Portrait Studios</h2>
+            </div>
+            <!--MODAL BODY-->
+            <div class="modal-body">
+                <iframe
+                    width="100%"
+                    height="500px"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtb6KOpO8dpsXtbAvJS1v0EjdDwapuBNc
+    &q=40.275990,-111.686630" allowfullscreen>
+            </iframe>
+
+                <!--<video id="video" class="video" style="width:100%; height:100%; overflow:hidden;">-->
+                <!--<source src="https://s3.amazonaws.com/www.nuvi.com-media/nuvi-intro-2015.mp4" type="video/mp4">-->
+                <!--</video>-->
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button class="btn btn-danger"-->
+            <!--data-dismiss="modal"> Close-->
+            <!--</button>-->
+
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+

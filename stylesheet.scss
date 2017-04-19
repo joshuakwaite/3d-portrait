@@ -21,9 +21,28 @@ body {
 }
 
 .offPageThird {
-  height: 300px;
-  background-color: #DDDEDE;
-}
+    //height: 100vh;
+    background-image: url('app/images/background-1.png');
+  background-color: dimgray;
+    background-position: center;
+    background-size: cover;
+    color: lightgrey;
+    //text-shadow: 1px 1px 0 #fff;
+
+    background-color: grey;
+    overflow: auto;
+    z-index: -9999;
+    background-color: rgba(0,0,0,.8);
+    background-blend-mode: multiply;
+  }
+
+  .offPageThird p {
+    //position: relative;
+    color: lightgrey;
+    //font-size: 5em;
+    //top: 150px;
+  }
+
 
 .sketchfab-embed-wrapper {
   position: relative;
@@ -181,15 +200,50 @@ button {
 
 .doingsDescriptionBackground {
   background-color: #38383A;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .footer {
   height: 250px;
   color: lightgrey;
   background-color: #38383A;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /*PRODUCT*/
+
+.macbook-row {
+  overflow: hidden;
+
+  p {
+    position: relative;
+    top: 150px;
+    margin-left: 15px;
+  }
+  img {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+}
+
+.checkPrices {
+  input {
+    width: 300px;
+    margin: auto;
+    margin-top: 45px;
+  }
+  select {
+    display: block;
+    margin: auto;
+  }
+  button {
+    display: block;
+    margin: auto;
+  }
+}
 
 .product-image {
   height: 50vh;
@@ -207,10 +261,10 @@ button {
 }
 
 .product-image .container {
-  width: 400px;
+  width: 330px;
   position: relative;
   top: 100px;
-  right: 250px;
+
 }
 
 .product-image p {
@@ -228,7 +282,7 @@ button {
   a {
     -moz-box-flex: 1;
     -webkit-box-flex: 1;
-    flex-basis: calc(100%/4);
+    flex-basis: calc(100%/8);
     flex-grow: 1;
     line-height: 0;
     -webkit-transition: opacity .2s ease-in-out;
@@ -247,12 +301,12 @@ button {
 //GIVE
 
 .give-image {
-  height: 50vh;
+  height: 100vh;
   background-image: url('app/images/give.jpg');
   background-position: center;
   background-size: cover;
   color: #000;
-  text-shadow: 1px 1px 0 #fff;
+  //text-shadow: 1px 1px 0 #fff;
 
   background-color: grey;
   overflow: auto;
@@ -260,9 +314,15 @@ button {
   background-color: rgba(0,0,0,.5);
   background-blend-mode: multiply;
 
-  p {
+  .big {
     color: white;
     font-size: 3em;
+    position: relative;
+    top: 150px;
+  }
+  p {
+    color: white;
+    font-size: 1em;
     position: relative;
     top: 150px;
   }
