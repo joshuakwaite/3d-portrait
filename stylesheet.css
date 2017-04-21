@@ -3,6 +3,80 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: #FFFFFF; }
 
+/*//////////////////////////////////////// */
+.text-left-not-xs, .text-left-not-sm, .text-left-not-md, .text-left-not-lg {
+  text-align: left; }
+
+.text-center-not-xs, .text-center-not-sm, .text-center-not-md, .text-center-not-lg {
+  text-align: center; }
+
+.text-right-not-xs, .text-right-not-sm, .text-right-not-md, .text-right-not-lg {
+  text-align: right; }
+
+.text-justify-not-xs, .text-justify-not-sm, .text-justify-not-md, .text-justify-not-lg {
+  text-align: justify; }
+
+@media (max-width: 767px) {
+  .text-left-not-xs, .text-center-not-xs, .text-right-not-xs, .text-justify-not-xs {
+    text-align: inherit; }
+
+  .text-left-xs {
+    text-align: left; }
+
+  .text-center-xs {
+    text-align: center; }
+
+  .text-right-xs {
+    text-align: right; }
+
+  .text-justify-xs {
+    text-align: justify; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .text-left-not-sm, .text-center-not-sm, .text-right-not-sm, .text-justify-not-sm {
+    text-align: inherit; }
+
+  .text-left-sm {
+    text-align: left; }
+
+  .text-center-sm {
+    text-align: center; }
+
+  .text-right-sm {
+    text-align: right; }
+
+  .text-justify-sm {
+    text-align: justify; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .text-left-not-md, .text-center-not-md, .text-right-not-md, .text-justify-not-md {
+    text-align: inherit; }
+
+  .text-left-md {
+    text-align: left; }
+
+  .text-center-md {
+    text-align: center; }
+
+  .text-right-md {
+    text-align: right; }
+
+  .text-justify-md {
+    text-align: justify; } }
+@media (min-width: 1200px) {
+  .text-left-not-lg, .text-center-not-lg, .text-right-not-lg, .text-justify-not-lg {
+    text-align: inherit; }
+
+  .text-left-lg {
+    text-align: left; }
+
+  .text-center-lg {
+    text-align: center; }
+
+  .text-right-lg {
+    text-align: right; }
+
+  .text-justify-lg {
+    text-align: justify; } }
+/*//////////////////////////////////////// */
 /*GENERAL*/
 .input-container input {
   display: inline-block;
@@ -13,8 +87,7 @@ body {
   background-color: #F3FBFF; }
 
 .offPageThird {
-  background-image: url("app/images/background-1.png");
-  background-color: dimgray;
+  background-color: #38383A;
   background-position: center;
   background-size: cover;
   color: lightgrey;
@@ -128,7 +201,7 @@ body {
 .home-image p {
   position: relative;
   color: white;
-  font-size: 5em;
+  font-size: 3em;
   top: 150px; }
 
 .doingsDescription {
@@ -153,18 +226,17 @@ body {
   margin-right: 0px; }
 
 .footer {
-  height: 250px;
   color: lightgrey;
   background-color: #38383A;
   margin-left: 0px;
-  margin-right: 0px; }
+  margin-right: 0px;
+  padding-bottom: 15px; }
 
 /*PRODUCT*/
 .macbook-row {
   overflow: hidden; }
   .macbook-row p {
     position: relative;
-    top: 150px;
     margin-left: 15px; }
   .macbook-row img {
     margin-top: 50px;
@@ -172,8 +244,7 @@ body {
 
 .checkPrices input {
   width: 300px;
-  margin: auto;
-  margin-top: 45px; }
+  margin: auto; }
 .checkPrices select {
   display: block;
   margin: auto; }

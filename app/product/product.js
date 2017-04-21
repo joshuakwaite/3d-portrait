@@ -58,7 +58,7 @@ app.controller("productController", ["$scope", "$location", function ($scope, $l
         } else if (printHeight < 6.499999) {
             return 89.95
         } else if (printHeight < 7.499999) {
-            return 99.95
+            return 114.95
         } else if (printHeight < 8.499999) {
             return 134.95
         } else if (printHeight < 9.499999) {
