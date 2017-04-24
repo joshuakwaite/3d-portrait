@@ -3,17 +3,17 @@ var app = angular.module("3dportraitApp");
 app.controller("productController", ["$scope", "$location", function ($scope, $location) {
 
 
-    var feed = new Instafeed({
-        get: 'user',
-        userId: 4794233868,
-        accessToken:  '4794233868.911d299.3d42fceb8414437a8e3d6f098b6d163a',
-        resolution: 'standard_resolution',
-        limit: 8
-    });
+    // var feed = new Instafeed({
+    //     get: 'user',
+    //     userId: 4794233868,
+    //     accessToken:  '4794233868.911d299.3d42fceb8414437a8e3d6f098b6d163a',
+    //     resolution: 'standard_resolution',
+    //     limit: 8
+    // });
+    //
+    // feed.run();
 
-    feed.run();
-
-    $scope.calculatePrice = function (inches, scale) {
+    $scope.calculatePrice = function (feet, inches, scale) {
 
         if (scale === 16) {
             scale = 1/16
@@ -39,6 +39,13 @@ app.controller("productController", ["$scope", "$location", function ($scope, $l
             scale = 1/4
         } else if (scale === 3) {
             scale = 1/3
+        }
+
+        if (feet > 0) {
+
+        var feetInInches = (feet * 12);
+
+        inches = feetInInches + inches;
         }
 
         $scope.price = calculate(inches, scale)
@@ -187,31 +194,31 @@ app.controller("productController", ["$scope", "$location", function ($scope, $l
 
 }]);
 
-
-function calculateStuff(inches, scale) {
-    var printHeight = (scale)*(inches)
-    console.log(printHeight)
-
-    if (printHeight < 3.49999) {
-        return 59.95
-    } else if (printHeight < 4.499999) {
-        return 69.95
-    } else if (printHeight < 5.499999) {
-        return 79.95
-    } else if (printHeight < 6.499999) {
-        return 89.95
-    } else if (printHeight < 7.499999) {
-        return 99.95
-    } else if (printHeight < 8.499999) {
-        return 134.95
-    } else if (printHeight < 9.499999) {
-        return 159.95
-    } else if (printHeight < 10.499999) {
-        return 179.95
-    } else if (printHeight < 11.499999) {
-        return 199.95
-    }
-
-}
+//
+// function calculateStuff(inches, scale) {
+//     var printHeight = (scale)*(inches)
+//     console.log(printHeight)
+//
+//     if (printHeight < 3.49999) {
+//         return 59.95
+//     } else if (printHeight < 4.499999) {
+//         return 69.95
+//     } else if (printHeight < 5.499999) {
+//         return 79.95
+//     } else if (printHeight < 6.499999) {
+//         return 89.95
+//     } else if (printHeight < 7.499999) {
+//         return 99.95
+//     } else if (printHeight < 8.499999) {
+//         return 134.95
+//     } else if (printHeight < 9.499999) {
+//         return 159.95
+//     } else if (printHeight < 10.499999) {
+//         return 179.95
+//     } else if (printHeight < 11.499999) {
+//         return 199.95
+//     }
+//
+// }
 //
 // console.log(calculateStuff(76, 1/9))

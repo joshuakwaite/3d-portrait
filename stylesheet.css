@@ -233,6 +233,9 @@ body {
   padding-bottom: 15px; }
 
 /*PRODUCT*/
+.height-container {
+  margin: auto; }
+
 .macbook-row {
   overflow: hidden; }
   .macbook-row p {
