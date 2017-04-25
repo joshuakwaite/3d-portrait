@@ -38,7 +38,7 @@
                         <!--<li><a href="#!/logout">Logout</a></li>-->
                         <!--<li><a href="#!/signup">Sign Up</a></li>-->
                         <!--<li class="clickable"><a data-toggle="modal" data-target="#getStarted">Set Appointment</a></li>-->
-                    <!--</ul>-->
+                        <!--</ul>-->
                 </div>
             </div>
         </nav>
@@ -53,9 +53,9 @@
             <div class="row">
                 <div class="col-sm-6 col-xs-12 col-md-3 ModelWrapper">
                     <iframe width="100%" height="100%"
-                            src="https://sketchfab.com/models/208743e1f2aa4cb3ba1a8b23dad112c9/embed"
-                            frameborder="0" allowvr allowfullscreen mozallowfullscreen="true"
-                            webkitallowfullscreen="true" onmousewheel=""></iframe>
+                            src="https://sketchfab.com/models/87388279c85c41ad82530e0b77f49794/embed" frameborder="0"
+                            allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                            onmousewheel=""></iframe>
                 </div>
                 <div class="col-sm-6 col-xs-12 col-md-3 ModelWrapper">
                     <iframe width="100%" height="100%"
@@ -91,14 +91,14 @@
             <a href="https://www.facebook.com/The3DPS/" target="_blank"><img src="app/images/facebook.png"
                                                                              class="socialMediaIcons clickable"></a>
             <a href="https://twitter.com/The3DPS?lang=en" target="_blank"><img src="app/images/twitter.png"
-                                                                             class="socialMediaIcons clickable"></a>
+                                                                               class="socialMediaIcons clickable"></a>
             <a href="https://www.instagram.com/the3dps/" target="_blank"><img src="app/images/instagram.png"
-                                                                             class="socialMediaIcons clickable"></a>
+                                                                              class="socialMediaIcons clickable"></a>
             <a href="https://www.pinterest.com/the3dportrait/" target="_blank"><img src="app/images/pinterest.png"
-                                                                             class="socialMediaIcons clickable"></a>
+                                                                                    class="socialMediaIcons clickable"></a>
             <br>
             <!--<input type="email" class="form-control newletterSignup" placeholder="Email"-->
-                   <!--style="width: 300px; display: inline-block;">-->
+            <!--style="width: 300px; display: inline-block;">-->
             <!--<button class="btn btn-info button-general" style="display: inline-block;">Subscribe</button>-->
         </div>
     </div>
@@ -118,7 +118,8 @@
         <p>Email: info@the3dps.com</p>
         <p>Phone: 385-645-3377</p>
         <a data-toggle="modal" data-target="#mapsModal">
-        <button class="btn btn-info button-general" id="viewMap">View Map</button></a>
+            <button class="btn btn-info button-general" id="viewMap">View Map</button>
+        </a>
     </div>
 </div>
 <div class="row" style="margin-left: 0px; margin-right: 0px;">
@@ -149,7 +150,6 @@
 <script src="app/schedule/schedule.js"></script>
 
 
-
 <!--SERVICES-->
 <script src="common/services/user-service.js"></script>
 <script src="common/services/object-service.js"></script>
@@ -163,20 +163,26 @@
         <div class="modal-content text-center">
             <!--MODAL HEADER-->
             <div class="modal-header">
-            <button type="button" class="close"
-            data-dismiss="modal"
-            ng-click="toggleEdit = false">&times;</button>
-            <h2 class="modal-title" style="color: black;">Make An Appointment</h2>
+                <button type="button" class="close"
+                        data-dismiss="modal"
+                        ng-click="toggleEdit = false">&times;</button>
+                <h2 class="modal-title" style="color: black;">Make An Appointment</h2>
             </div>
             <!--MODAL BODY-->
             <div class="modal-body">
 
-                <p>Fill out the form below to schedule an appointment, or feel free to walk into our studio anytime during operating hours.</p>
+                <p>Fill out the form below to schedule an appointment, or feel free to walk into our studio anytime
+                    during operating hours.</p>
                 <form>
                     <div class="input-container">
                         <input type="text" class="form-control" ng-model="user.firstName" placeholder="First Name">
-                        <input type="text" class="form-control" ng-model="user.lastName" placeholder="Last Name"><br><input type="text" class="form-control" ng-model="user.phoneNumber" placeholder="Phone Number">
-                        <input type="text" class="form-control" ng-model="user.emailAddress" placeholder="Email Address"><br><input type="date" class="form-control" ng-model="user.appointmentDay">
+                        <input type="text" class="form-control" ng-model="user.lastName"
+                               placeholder="Last Name"><br><input type="text" class="form-control"
+                                                                  ng-model="user.phoneNumber"
+                                                                  placeholder="Phone Number">
+                        <input type="text" class="form-control" ng-model="user.emailAddress"
+                               placeholder="Email Address"><br><input type="date" class="form-control"
+                                                                      ng-model="user.appointmentDay">
                         <input type="time" class="form-control" ng-model="user.appointmentTime">
                     </div>
                 </form>
@@ -184,12 +190,12 @@
                 <p>You will receive a confirmation email once you submit for an appointment.</p>
             </div>
             <div class="modal-footer">
-            <button class="btn btn-info"
-            data-dismiss="modal" ng-click="appointmentSubmittal()"> Submit
-            </button>
+                <button class="btn btn-info"
+                        data-dismiss="modal" ng-click="appointmentSubmittal()"> Submit
+                </button>
                 <button class="btn btn-danger"
-            data-dismiss="modal"> Close
-            </button>
+                        data-dismiss="modal"> Close
+                </button>
 
             </div>
         </div>
@@ -201,20 +207,20 @@
         <div class="modal-content">
             <!--MODAL HEADER-->
             <div class="modal-header">
-            <button type="button" class="close"
-            data-dismiss="modal"
-            ng-click="toggleEdit = false">&times;</button>
-            <h2 class="modal-title" style="color: black;">3D Portrait Studios</h2>
+                <button type="button" class="close"
+                        data-dismiss="modal"
+                        ng-click="toggleEdit = false">&times;</button>
+                <h2 class="modal-title" style="color: black;">3D Portrait Studios</h2>
             </div>
             <!--MODAL BODY-->
             <div class="modal-body">
                 <iframe
-                    width="100%"
-                    height="500px"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtb6KOpO8dpsXtbAvJS1v0EjdDwapuBNc
+                        width="100%"
+                        height="500px"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtb6KOpO8dpsXtbAvJS1v0EjdDwapuBNc
     &q=40.275990,-111.686630" allowfullscreen>
-            </iframe>
+                </iframe>
 
                 <!--<video id="video" class="video" style="width:100%; height:100%; overflow:hidden;">-->
                 <!--<source src="https://s3.amazonaws.com/www.nuvi.com-media/nuvi-intro-2015.mp4" type="video/mp4">-->
