@@ -370,4 +370,25 @@ body {
   background-color: transparent;
   border-color: white; }
 
+.mini-image {
+  height: 50vh;
+  background-image: url("app/images/IMG_9844.JPG");
+  background-position: center;
+  background-size: cover;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
+  background-color: grey;
+  overflow: auto;
+  z-index: -9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply; }
+
+.mini-image .container {
+  position: relative;
+  top: 150px; }
+
+.mini-image p {
+  color: white;
+  font-size: 3em; }
+
 /*# sourceMappingURL=stylesheet.css.map */

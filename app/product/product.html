@@ -20,25 +20,17 @@
         </div>
     </div>
 
-    <div class="row macbook-row" style="margin: 0px;">
-        <div class="col-sm-6 col-xs-12">
-            <img src="app/images/lawrencemini.JPG" alt="Your browser does not support the image type" class="img-responsive center-block" style="max-height: 500px;">
-        </div>
-        <div class="col-sm-6 col-xs-12 text-center">
-            <p style="font-size: 2em; margin-top: 250px;">Minis</p>
-            <p style="color: gray"> Our mini collection offers you and your loved ones and opportunity to preserve your memories in a way never before available. We simply take your 3D model that you had scanned in our store, and print to the specified size or scale.</p>
-        </div>
-    </div>
 
     <div class="row macbook-row" style="margin: 0px;">
-        <div class="col-sm-6 col-xs-12 text-center">
-            <p style="font-size: 2em; margin-top: 250px;">We print everything</p>
+        <div class="col-xs-12 text-center">
+            <p style="font-size: 2em; margin-top: 150px;">We print everything</p>
             <p style="color: gray;">Want something else 3D printed? We print in whatever material you want. Just send us the size of your model and the material you want it in, and we will get back to you.
             </p>
         </div>
-        <div class="col-sm-6 col-xs-12">
-            <img src="app/images/3d-model.png" alt="Your browser does not support the image type">
+        <div class="col-xs-12">
+            <img src="app/images/printed.jpg" alt="Your browser does not support the image type" class="img-responsive">
         </div>
+
     </div>
 
     <div class="row offPageSecond" style="margin: 0px;">
@@ -47,22 +39,37 @@
         </div>
     </div>
 
-    <div class="row offPageThird" style="margin: 0px;">
-        <div class="col-sm-6 col-xs-12">
-            <h3 class="text-center" style="color: #31B0D5">Standard Pricing</h3>
-            <h5 class="text-center">Most Popular</h5>
+
+</div>
+
+
+
+
+
+<div class="modal fade" id="pricesModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!--MODAL HEADER-->
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal"
+                        ng-click="toggleEdit = false">&times;</button>
+                <h2 class="modal-title" style="color: black;">3D Portrait Studios Pricing</h2>
+            </div>
+            <!--MODAL BODY-->
+            <div class="modal-body">
                 <div class="table-responsive">
-                    <table class="table text-center" style="margin-left: 15px; margin-right: 15px;">
+                    <table class="table table-striped text-center" style="margin-left: 15px; margin-right: 15px;">
                         <thead>
                         <tr>
-                            <td class="text-center">Mini Size</td>
-                            <td class="text-center">Price</td>
-                            <td class="text-center">Additional Person</td>
-                            <td class="text-center">Additional Under 36"</td>
+                            <th class="text-center">Mini Size</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Additional Person</th>
+                            <th class="text-center">Additional Under 36"</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="prices in priceList">
+                        <tr ng-repeat="prices in modalPriceList">
                             <td>{{prices.Size}} inches</td>
                             <td>{{prices.Price | currency}}</td>
                             <td>{{prices.Additional | currency}}</td>
@@ -71,43 +78,22 @@
 
                         </tbody>
                     </table>
+                    
+                    <div class="text-center"><p>Scan of additional props - $19.95</p>
+                    <p>Rush order - $39.95</p>
+                    <p>Digital copy of 3D scan - $19.95</p></div>
                 </div>
-                <p class="text-center">For more pricing, download our price sheet by clicking below.</p>
-            <a href="https://www.dropbox.com/s/u64mnf4cgxt20e3/the3dps-price-sheet.pdf?dl=1" style="text-decoration: none;"><button class="btn btn-danger"style="display: block; margin: auto; margin-bottom: 50px;">Pricing</button></a>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-            <h3 class="text-center" style="color: #31B0D5">Pricing to Scale</h3>
-            <h5 class="text-center">Input the information below to find the size and price of your desired mini</h5>
-            <div class="checkPrices">
-                <form>
-                    <p class="text-center" style="margin-top: 25px;">Actual height of object being scanned:</p>
-                    <div class="height-container text-center">
-                        <input type="number" class="form-control" ng-model="feet" placeholder="Feet" style="display: inline-block; width: 100px;">
-                    <input type="number" class="form-control" ng-model="inches" placeholder="Inches" style="display: inline-block; width: 100px;"></div>
-                    <br>
-                    <!--<input type="text" class="form-control" ng-model="scale" placeholder="Scale">-->
-                    <p class="text-center">Scale:</p>
-                    <select ng-model="scale" class="form-control" style="width: 200px">
-                        <option ng-value=16>1/16 Scale</option>
-                        <option ng-value=14>1/14 Scale</option>
-                        <option ng-value=12>1/12 Scale</option>
-                        <option ng-value=10>1/10 Scale</option>
-                        <option ng-value=9>1/9 Scale</option>
-                        <option ng-value=8>1/8 Scale</option>
-                        <option ng-value=7>1/7 Scale</option>
-                        <option ng-value=6>1/6 Scale</option>
-                        <option ng-value=5>1/5 Scale</option>
-                        <option ng-value=4>1/4 Scale</option>
-                        <option ng-value=3>1/3 Scale</option>
-                    </select>
-                    <br>
-                    <button class="btn btn-info" ng-click="calculatePrice(feet, inches, scale)">Calculate</button>
-                </form>
-                <br>
-                <p class="text-center">Mini height in inches: {{size | number: 2}}</p>
-                <p class="text-center">Mini price: {{price | currency}}</p>
+
+                <!--<video id="video" class="video" style="width:100%; height:100%; overflow:hidden;">-->
+                <!--<source src="https://s3.amazonaws.com/www.nuvi.com-media/nuvi-intro-2015.mp4" type="video/mp4">-->
+                <!--</video>-->
             </div>
+            <!--<div class="modal-footer">-->
+            <!--<button class="btn btn-danger"-->
+            <!--data-dismiss="modal"> Close-->
+            <!--</button>-->
+
+            <!--</div>-->
         </div>
     </div>
 </div>
-

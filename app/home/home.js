@@ -10,7 +10,7 @@ app.controller("homeController", ["$scope", function ($scope) {
             }, 'slow');
         });
 
-    $("a[href='#!/product']").click(function() {
+    $("a[href='#!/mini']").click(function() {
         $("html, body").scrollTop(0,0);
     });
 
