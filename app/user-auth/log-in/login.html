@@ -1,0 +1,54 @@
+<div class="authPages">
+    <div class="text-center">
+
+        <h1>Please Login</h1>
+
+    </div>
+
+    <form>
+        <div class="form-group">
+            <div class="container">
+                <div class="loginInput">
+                    <div class="row">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4">
+                            Username:
+                            <input class="form-control" ng-model="user.username">
+                        </div>
+                        <div class="col-xs-4"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4">
+                            Password:
+                            <input class="form-control" ng-model="user.password" type="password">
+                            <div class="text-center"><a class="clickable"> forgot password? </a></div>
+
+                        </div>
+                        <div class="col-xs-4"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <button ng-click='login(user)' class='btn btn-primary'>Submit</button>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="loginMessage">
+                        <br>
+                        <div class="col-xs-12 text-center">
+                            <span class="text-danger">{{loginMessage}}</span>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                           <a href="#!/signup"> Need an account? Create one here.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

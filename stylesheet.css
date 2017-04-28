@@ -391,4 +391,16 @@ body {
   color: white;
   font-size: 3em; }
 
+.authPages {
+  height: 100vh;
+  background-image: url("app/images/spaceman.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #000;
+  background-color: grey;
+  overflow: auto;
+  z-index: -9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply; }
+
 /*# sourceMappingURL=stylesheet.css.map */

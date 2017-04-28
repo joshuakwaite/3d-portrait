@@ -1,0 +1,78 @@
+<div class="authPages">
+    <div class="text-center">
+        <h1>The 3DPS Account Signup</h1>
+    </div>
+
+    <p class="signup text-center" style="padding-bottom: 10px;">Use the form below to create your free 3DPS account:</p>
+
+    <form>
+        <div class="form-group">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        First Name:
+                        <input class="form-control" ng-model="user.firstName">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        Last Name:
+                        <input class="form-control" ng-model="user.lastName">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        Username:
+                        <input class="form-control" ng-model="user.username">
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        Email Address:
+                        <input class="form-control" ng-model="user.email">
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        Password:
+                        <input class="form-control" type="password" id="password" ng-model="user.password">
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        Repeat Password:
+                        <input type="password" id="passwordRepeat" class="form-control" ng-model="user.confirmPassword">
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-5"></div>
+                    <div class="col-xs-2">
+                        <span class="text-danger" ng-show="passwordMessage">{{passwordMessage}}</span>
+                    </div>
+                    <div class="col-xs-5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <button ng-click='signup(user)' class='btn btn-primary'>Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

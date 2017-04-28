@@ -17,7 +17,7 @@ app.service('userService', ["$http", "Backand", function($http, Backand) {
     };
 
     vm.signUp = function (firstName, lastName, email, password, confirmPassword) {
-        return backand.signup(firstName, lastName, email, password, confirmPassword)
+        return Backand.signup(firstName, lastName, email, password, confirmPassword)
                 .then(function(res) {
                     console.log(res.data)
                 })
@@ -28,7 +28,7 @@ app.service('userService', ["$http", "Backand", function($http, Backand) {
         return Backand.signout()
     };
 
-    vm.signIn = function (username, password) {
+    vm.signin = function (username, password) {
         return Backand.signin(username, password)
     };
 

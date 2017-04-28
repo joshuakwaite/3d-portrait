@@ -34,12 +34,12 @@
                         <!--<li><a href="#!/contact">Contact</a></li>-->
 
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <!--<li><a href="#!/login">Login</a></li>-->
-                        <!--<li><a href="#!/logout">Logout</a></li>-->
-                        <!--<li><a href="#!/signup">Sign Up</a></li>-->
+                    <ul class="nav navbar-nav navbar-right" ng-controller="authController">
+                        <li ng-hide="isAuthenticated()"><a href="#!/login">Login</a></li>
+                        <li ng-show="isAuthenticated()" ng-controller="logoutController"><a ng-click="signout()" class="clickable">Logout</a></li>
+                        <li ng-hide="isAuthenticated()"><a href="#!/signup">Sign Up</a></li>
                         <!--<li class="clickable"><a data-toggle="modal" data-target="#getStarted">Set Appointment</a></li>-->
-                        <!--</ul>-->
+                        </ul>
                 </div>
             </div>
         </nav>
@@ -139,9 +139,11 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
-<script src="//cdn.backand.net/vanilla-sdk/1.0.9/backand.js"></script>
-<script src="//cdn.backand.net/angular1-sdk/1.9.5/backand.provider.js"></script>
+<script src="./bower_components/backand-vanilla-sdk/dist/backand.js"></script>
+<script src="./bower_components/backand-angular1-sdk/dist/backand.provider.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.js"></script>
+
+<!--PAGES-->
 <script src="app.js"></script>
 <script src="app/home/home.js"></script>
 <script src="app/contact/contact.js"></script>
@@ -150,6 +152,9 @@
 <script src="app/give/give.js"></script>
 <script src="app/schedule/schedule.js"></script>
 <script src="app/mini/mini.js"></script>
+<script src="app/user-auth/log-in/login.js"></script>
+<script src="app/user-auth/log-out/logout.js"></script>
+<script src="app/user-auth/sign-in/signup.js"></script>
 
 
 <!--SERVICES-->
