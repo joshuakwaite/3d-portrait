@@ -36,6 +36,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right" ng-controller="authController">
                         <li ng-hide="isAuthenticated()"><a href="#!/login">Login</a></li>
+                        <li ng-show="isAuthenticated()"><a href="#!/userAccount">{{UserService.savedUser.firstName}}'s Account</a></li>
                         <li ng-show="isAuthenticated()" ng-controller="logoutController"><a ng-click="signout()" class="clickable">Logout</a></li>
                         <li ng-hide="isAuthenticated()"><a href="#!/signup">Sign Up</a></li>
                         <!--<li class="clickable"><a data-toggle="modal" data-target="#getStarted">Set Appointment</a></li>-->
@@ -155,6 +156,7 @@
 <script src="app/user-auth/log-in/login.js"></script>
 <script src="app/user-auth/log-out/logout.js"></script>
 <script src="app/user-auth/sign-in/signup.js"></script>
+<script src="app/user-auth/account/account.js"></script>
 
 
 <!--SERVICES-->

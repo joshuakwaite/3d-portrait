@@ -530,6 +530,32 @@ button {
 
 }
 
+.signupForm {
+  .labels {
+    color: white;
+  }
+  .requiredStar {
+    color: red;
+  }
+}
+
+.account-image {
+  height: 50vh;
+  background-image: url('app/images/spaceman.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
+
+  background-color: grey;
+  overflow: auto;
+  z-index: -9999;
+  background-color: rgba(0,0,0,.5);
+  background-blend-mode: multiply;
+}
+
+
+
 //.input-container {
 //  display: flex;
 //  flex-wrap: wrap;
@@ -545,3 +571,4 @@ button {
 //    margin: 10px 0px 10px 0px;
 //  }
 //}
+

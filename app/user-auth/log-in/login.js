@@ -8,11 +8,9 @@ $scope.login = function (user) {
     }
     userService.signin(user.username, user.password)
         .then(function(res) {
-        console.log("signin succeeded with user :" + res.data.username);
-        $location.path("/home")
-
-
-
+        console.log("signin succeeded with user: " + res.data.username);
+        userService.getUserInfo();
+        $location.path("/home");
     })
         .catch(function(res) {
             $scope.loginMessage = "Invalid username or password"

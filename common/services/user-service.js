@@ -2,10 +2,12 @@ var app = angular.module("3dportraitApp");
 
 app.service('userService', ["$http", "Backand", function($http, Backand) {
 
-    var vm = this;
+    var self = this;
+
+    this.savedUser = null;
 
 
-    vm.getUsers = function(name, sort, filter, pageSize, pageNumber) {
+    this.getUsers = function(name, sort, filter, pageSize, pageNumber) {
 
             var params = {
                 pageSize: pageSize || 20,
@@ -16,23 +18,28 @@ app.service('userService', ["$http", "Backand", function($http, Backand) {
             return Backand.object.getList(name, params);
     };
 
-    vm.signUp = function (firstName, lastName, email, password, confirmPassword) {
-        return Backand.signup(firstName, lastName, email, password, confirmPassword)
+    this.signUp = function (firstName, lastName, email, password, confirmPassword, phoneNumber) {
+        return Backand.signup(firstName, lastName, email, password, confirmPassword, phoneNumber)
                 .then(function(res) {
-                    console.log(res.data)
                 })
 
     }
 
-    vm.signOut = function () {
+    this.signOut = function () {
         return Backand.signout()
     };
 
-    vm.signin = function (username, password) {
+    this.signin = function (username, password) {
         return Backand.signin(username, password)
     };
 
-    vm.getUserInfo = function () {
-        return Backand.user.getUserDetails()
+    this.getUserInfo = function () {
+        Backand.user.getUserDetails().then(function(response) {
+            Backand.object.getOne("users", response.data.userId).then(function(res) {
+                self.savedUser = res.data
+            })
+            // self.savedUser = response.data;
+        })
     }
+
 }]);
